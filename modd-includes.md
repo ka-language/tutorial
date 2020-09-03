@@ -28,9 +28,33 @@ You can also include oat archives inside of omm scripts.
 include "test.oat"
 ```
 
-To include from the Omm standard library, you can use backticks
-```clojure
-include `lib.oat` ;include lib.oat from the standard library
+When you include like above, you are including relative to the entry file's directory. Image a project like this:
+
+```
+src/
+| util/
+| | data.omm
+| | util.omm
+| index.omm
 ```
 
-If you install from the MSI installer, `lib.oat` will be an archive of the entire stdlib. If you instaled from the source, you can browse [the Omm repository](https://github.com/omm-lang/omm/tree/master/src/stdlib) to see what the Omm standard library has and maybe even contribute to it.
+In `util.omm`, let's say that we have something like:
+
+```clojure
+include "data.omm"
+```
+
+This would cause a compile-time error because it would search for it in the `src/` directory instead of the `src/util/` directory. To include relative to the current file, you can surround your quotes in parenthesis:
+
+```clojure
+; instead of include "data.omm"
+; we can use:
+include ("data.omm")
+```
+
+This causes no compiler error, and find the "data.omm" file in `src/util/`.
+
+To include from the Omm standard library, you can use backticks
+```clojure
+include `util/somestdlib.omm`
+```
