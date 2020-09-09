@@ -19,15 +19,14 @@ test?(1, 2, 3)
 ; instead of
 test:(1, 2, 2)
 ```
-
-The `?` operator returns a thread type. If you want to get the value of a thread type, you can use the `await` keyword
+The `?` operator returns a thread type. If you want to get the value of a thread type, you can use the `await` function
 
 ```clojure
-value := await test!(1, 2, 3)
+value := await:(test?(1, 2, 3))
 ; or you can do
 val1 := test?(1, 2, 3)
 ; do stuff
-val2 := await val1
+val2 := await:(val1)
 ```
 
 Second, parameter lists in omm look like
