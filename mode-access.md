@@ -6,7 +6,7 @@ We already covered private and public fields in prototypes, but sometimes we onl
 ;test.omm
 include "test2.omm"
 var p = proto {
-    access ["thisf", "test2.omm", etc...]
+    access ("thisf", "test2.omm", etc...)
     static var protectedfield = fn() {
 
     }
@@ -14,7 +14,7 @@ var p = proto {
 
 ;test2.omm
 var main = fn() {
-    log p::protectedfield()
+    log p::protectedfield:()
 }
 ```
 
@@ -26,7 +26,7 @@ This example works, but if we tried to do something like:
 ;test.omm
 include "test2.omm"
 var p = proto {
-    access ["thisf"] ;only allow for this file to use this field
+    access ("thisf") ;only allow for this file to use this field
     static var protectedfield = fn() {
 
     }
@@ -34,7 +34,7 @@ var p = proto {
 
 ;test2.omm
 var main = fn() {
-    log p::protectedfield()
+    log p::protectedfield:()
 }
 ```
 
