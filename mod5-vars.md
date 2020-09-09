@@ -27,10 +27,10 @@ Without declaring `b`, you would get a compiler error.
 Lets take a look at this program:
 
 ```clojure
-var main = fn() {
+var main = fn() => {
   local := 3
 }
-var anotherfn = fn() {
+var anotherfn = fn() => {
   global ;use the global variable
   local ;use the local variable (would cause an error)
 }

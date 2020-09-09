@@ -3,11 +3,11 @@
 Functions are ways re-using blocks of code. This tutorial has already shown you a few examples of functions, but lets look at a more complex example
 
 ```clojure
-var main: fn() {
+var main: fn() => {
   val := test:(1, 2, 3])
 }
 
-var test: fn(number -> a, number -> b, number -> c) {
+var test: fn(number -> a, number -> b, number -> c) => {
   return a + b + c
 }
 ```
@@ -52,12 +52,12 @@ fn(a, b) ;automatically gets converted to fn(any -> a, any -> b)
 Now lets look at the previous example, but with wrong types
 
 ```clojure
-var main = fn() {
+var main = fn() => {
   ;pass bool, string, and array
   val := test:(true, "hi", (1, 2, 3))
 }
 
-var test: fn(number -> a, number -> b, number -> c) {
+var test: fn(number -> a, number -> b, number -> c) => {
   return a + b + c
 }
 ```
@@ -67,17 +67,17 @@ This would cause an error, where the function with that type list does not exist
 To overload, you can use the built in `ovld` keyword.
 
 ```clojure
-var main = fn() {
+var main = fn() => {
   ;pass bool, string, and array
   val := test:(true, "hi", (1, 2, 3))
 }
 
-var test = fn(number -> a, number -> b, number -> c) {
+var test = fn(number -> a, number -> b, number -> c) => {
   return a + b + c
 }
 
 ;create an overloaded `test` with the type list of bool, string, and array
-ovld test = fn(bool -> a, string -> b, array -> c) {
+ovld test = fn(bool -> a, string -> b, array -> c) => {
 
   log a
   log b

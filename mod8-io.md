@@ -6,8 +6,8 @@ Omm has two ways of outputting to the console
 - `print`
 
 ```clojure
-print("hello")
-log("world")
+print:("hello")
+log:("world")
 ```
 
 In the console, you would see
@@ -21,7 +21,7 @@ The difference between `log` and `print` is that `log` adds a newline to the out
 To read text from the console, you can use the built in `input` function.
 
 ```clojure
-input_value := input("hello world")
+input_value := input:("hello world")
 ```
 
 And you would see
