@@ -74,7 +74,7 @@ var test_proto = proto {
   static var d = "hello world"
 
   static var some_namespace_func = fn() => {
-    log "Coming from the namespace"
+    log:("Coming from the namespace")
   }
 }
 ```

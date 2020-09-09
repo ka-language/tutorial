@@ -31,10 +31,10 @@ Each loops are range based
 ```clojure
 iterator := [1, 2, 3]
 each (iterator, k, v) => {
-  print k
-  print " "
-  print v
-  log ""
+  print:(k)
+  print:(":")
+  print:(v)
+  log:("")
 }
 ; this program would print
 ; 0 1
@@ -47,7 +47,7 @@ To skip the loop, you can use the `continue,` statement, and to break it, you ca
 ```clojure
 while (true) => {
   if (false) break,
-  log "hello"
+  log:("hello")
   continue,
 }
 ; you can also use continue and break in each loops

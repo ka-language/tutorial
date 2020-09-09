@@ -46,7 +46,7 @@ var p = proto {
 ;test2.omm
 
 var main = fn() {
-    log p::protectedfield:()
+    log:(p::protectedfield:())
 }
 ```
 
