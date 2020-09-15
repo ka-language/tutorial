@@ -1,5 +1,5 @@
-# Introduction to Omm
+# Introduction to Ka
 
-Omm is a general purpose language with arbitrary precision
+Ka is a general purpose language with arbitrary precision
 
-Omm is also a very versatile language that supports server side development, mathematical programming, and cross platform development.
+Ka is also a very versatile language that supports server side development, mathematical programming, and cross platform development.

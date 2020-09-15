@@ -12,7 +12,7 @@ var test: fn(number -> a, number -> b, number -> c) => {
 }
 ```
 
-Now you may notice two things in Omm that are significantly different than in other languages. First, To call a function, we use `func_name:()`, instead of `func_name()`. This operation is `:` which means synchronous call. Omm also has asynchronous functions. To call an function asynchronously, you can use the `?` operator as mentioned before.
+Now you may notice two things in Ka that are significantly different than in other languages. First, To call a function, we use `func_name:()`, instead of `func_name()`. This operation is `:` which means synchronous call. Ka also has asynchronous functions. To call an function asynchronously, you can use the `?` operator as mentioned before.
 
 ```clojure
 test?(1, 2, 3)
@@ -29,7 +29,7 @@ val1 := test?(1, 2, 3)
 val2 := await:(val1)
 ```
 
-Second, parameter lists in omm look like
+Second, parameter lists in ka look like
 ```
 (string -> a, string -> b)
 ```
@@ -37,12 +37,12 @@ Whereas in javascript, and python they look more like
 ```
 (a, b)
 ```
-The key difference is that omm names a type before an argument. This is because omm allows something called overloading. If you want an argument to have any type you can use `any ->`.
+The key difference is that ka names a type before an argument. This is because ka allows something called overloading. If you want an argument to have any type you can use `any ->`.
 ```clojure
 fn(any -> a, any -> b) ;accepts any type for a and b
 ```
 
-But the omm compiler can automatically assume the type:
+But the ka compiler can automatically assume the type:
 
 ```clojure
 fn(a, b) ;automatically gets converted to fn(any -> a, any -> b)

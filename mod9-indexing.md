@@ -1,6 +1,6 @@
 # Indexing
 
-Omm has an operator to index types (::). We can use this operator to index strings, arrays, and hashes.
+Ka has an operator to index types (::). We can use this operator to index strings, arrays, and hashes.
 
 ```clojure
 ;example for string

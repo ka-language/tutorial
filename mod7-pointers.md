@@ -1,6 +1,6 @@
 # Pointer Variables
 
-In Omm, every variable is a reference (pointer). Lets take an example
+In Ka, every variable is a reference (pointer). Lets take an example
 
 ```clojure
 a := 1
@@ -17,7 +17,7 @@ int* a = &_a;
 int b = *a;
 ```
 
-Omm can do this with the `clone[]` built in function.
+Ka can do this with the `clone[]` built in function.
 
 ```clojure
 a := 1

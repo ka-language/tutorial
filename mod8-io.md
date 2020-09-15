@@ -1,6 +1,6 @@
 # Input and Output
 
-Omm has two ways of outputting to the console
+Ka has two ways of outputting to the console
 
 - `log`
 - `print`
