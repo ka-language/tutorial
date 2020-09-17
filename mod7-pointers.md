@@ -1,6 +1,6 @@
 # Pointer Variables
 
-In Ka, every variable is a reference (pointer). Lets take an example
+In Tusk, every variable is a reference (pointer). Lets take an example
 
 ```clojure
 a := 1
@@ -17,7 +17,7 @@ int* a = &_a;
 int b = *a;
 ```
 
-Ka can do this with the `clone[]` built in function.
+Tusk can do this with the `clone[]` built in function.
 
 ```clojure
 a := 1

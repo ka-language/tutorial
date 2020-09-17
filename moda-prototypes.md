@@ -1,6 +1,6 @@
 # Prototypes and Objects
 
-Prototypes are classes in Ka. Prototypes allow programs to create new datatypes. Prototypes are made up of instance and static variables. Instance variables are stored in an *object* of that prototype, while the static is stored in the namespace of that prototype.
+Prototypes are classes in Tusk. Prototypes allow programs to create new datatypes. Prototypes are made up of instance and static variables. Instance variables are stored in an *object* of that prototype, while the static is stored in the namespace of that prototype.
 
 We can make a new prototype like this
 
@@ -28,7 +28,7 @@ var test_proto: proto {
 }
 ```
 
-If you come from object oriented statically typed languages, like Java, C++, Go, C#, etc, then you will know about public and private variables. Ka, despite being dynammically typed, also has this feature. To create a private variable in a prototype, you can prefix the variable name with an uderscore.
+If you come from object oriented statically typed languages, like Java, C++, Go, C#, etc, then you will know about public and private variables. Tusk, despite being dynammically typed, also has this feature. To create a private variable in a prototype, you can prefix the variable name with an uderscore.
 
 ```
 var test_proto = proto {

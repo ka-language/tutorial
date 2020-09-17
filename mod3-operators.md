@@ -1,6 +1,6 @@
 # Operators
 
-Ka, like most programming languages, uses operators to perform tasks. The list of Ka's operators are shown here:
+Tusk, like most programming languages, uses operators to perform tasks. The list of Tusk's operators are shown here:
 
 | Name | Function |
 |:----:|:---------:|

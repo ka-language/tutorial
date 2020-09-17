@@ -1,6 +1,6 @@
 # Input and Output
 
-Ka has two ways of outputting to the console
+Tusk has two ways of outputting to the console
 
 - `log`
 - `print`

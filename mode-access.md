@@ -1,6 +1,6 @@
 # Specific File Access
 
-We already covered private and public fields in prototypes, but sometimes we only want the current file to access the field. In Java, we can use the `protected` keyword to do this. Ka has a similar concept. Instead of allowing use in the current package (like in java and go), we list the files that have access to the field.
+We already covered private and public fields in prototypes, but sometimes we only want the current file to access the field. In Java, we can use the `protected` keyword to do this. Tusk has a similar concept. Instead of allowing use in the current package (like in java and go), we list the files that have access to the field.
 
 ```clojure
 ;include:
