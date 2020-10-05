@@ -10,7 +10,7 @@ We already covered private and public fields in prototypes, but sometimes we onl
 
 var p = proto {
     access ("thisf", "test2.omm", etc...)
-    static var protectedfield = fn() => {
+    static var protectedfield = fn() {
 
     }
 }
@@ -19,7 +19,7 @@ var p = proto {
 
 ;test2.omm
 
-var main = fn() => {
+var main = fn() {
     log p::protectedfield:()
 }
 ```
@@ -36,7 +36,7 @@ This example works, but if we tried to do something like:
 
 var p = proto {
     access ("thisf") ;only allow for this file to use this field
-    static var protectedfield = fn() => {
+    static var protectedfield = fn() {
 
     }
 }

@@ -17,12 +17,12 @@ var test_proto: proto {
   instance var a
   instance var b
 
-  instance var initialize: fn(av, bv) => {
+  instance var initialize: fn(av, bv) {
     a = av
     b = bv
   }
 
-  instance var somefunc: fn() => {
+  instance var somefunc: fn() {
     log a ;this would print a from the instance
   }
 }
@@ -35,16 +35,16 @@ var test_proto = proto {
   instance var a
   instance var b
 
-  instance var initialize = fn(av, bv) => {
+  instance var initialize = fn(av, bv) {
     a: av
     b: bv
   }
 
-  instance var somefunc = fn() => {
+  instance var somefunc = fn() {
     log a ;this would print a from the instance
   }
 
-  instance var _private = fn() => { ;this method is private
+  instance var _private = fn() { ;this method is private
     log "Coming from a private method"
   }
 }
@@ -57,23 +57,23 @@ var test_proto = proto {
   instance var a
   instance var b
 
-  instance var initialize = fn(av, bv) => {
+  instance var initialize = fn(av, bv) {
     a: av
     b: bv
   }
 
-  instance var somefunc = fn() => {
+  instance var somefunc = fn() {
     log a ;this would print a from the instance
   }
 
-  instance var _private = fn() => { ;this method is private
+  instance var _private = fn() { ;this method is private
     log "Coming from a private method"
   }
 
   static var c = 13
   static var d = "hello world"
 
-  static var some_namespace_func = fn() => {
+  static var some_namespace_func = fn() {
     log:("Coming from the namespace")
   }
 }
@@ -82,7 +82,7 @@ var test_proto = proto {
 Now we can use this prototype!
 
 ```clojure
-var main = fn() => {
+var main = fn() {
   log test_proto::c ;would log 12
   obj := make[test_proto] ;create an object from the proto `test_proto`
   obj::initialize("value for a", "value for b") ;run the initialize function
