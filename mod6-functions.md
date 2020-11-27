@@ -7,7 +7,7 @@ var main: fn() {
   val := test:(1, 2, 3])
 }
 
-var test: fn(number -> a, number -> b, number -> c) {
+var test: fn(int -> a, int -> b, int -> c) {
   return a + b + c
 }
 ```
@@ -56,7 +56,7 @@ var main = fn() {
   val := test:(true, "hi", (1, 2, 3))
 }
 
-var test: fn(number -> a, number -> b, number -> c) {
+var test: fn(int -> a, int -> b, int -> c) {
   return a + b + c
 }
 ```
@@ -71,7 +71,7 @@ var main = fn() {
   val := test:(true, "hi", (1, 2, 3))
 }
 
-var test = fn(number -> a, number -> b, number -> c) {
+var test = fn(int -> a, int -> b, int -> c) {
   return a + b + c
 }
 
